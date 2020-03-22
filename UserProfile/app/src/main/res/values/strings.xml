@@ -8,4 +8,6 @@
     <string name="hint_description">Description</string>
     <string name="description_image_create_profile">Placeholder image create profile</string>
     <string name="confirm_button">Confirm</string>
+    <string name="profile_image_description">Image on user profile</string>
+    <string name="name">%1$s %2$s</string>
 </resources>

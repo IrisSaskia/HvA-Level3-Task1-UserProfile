@@ -8,8 +8,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_create_profile.*
-
-const val GALLERY_REQUEST_CODE = 100
+import kotlinx.android.synthetic.main.activity_profile.*
 
 class CreateProfileActivity : AppCompatActivity() {
     private var profileImageUri: Uri? = null
@@ -63,4 +62,7 @@ class CreateProfileActivity : AppCompatActivity() {
         }
     }
 
+    companion object {
+        const val GALLERY_REQUEST_CODE = 100
+    }
 }
