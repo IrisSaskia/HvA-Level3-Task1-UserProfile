@@ -1,5 +1,6 @@
 package com.example.userprofile
 
+import Profile
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
@@ -22,7 +23,22 @@ class CreateProfileActivity : AppCompatActivity() {
 
     private fun initViews() {
         btnOpenGallery.setOnClickListener { onGalleryClick() }
+        btnConfirm.setOnClickListener { onConfirmClick() }
     }
+
+    private fun onConfirmClick() {
+        val profile = Profile(
+            etFirstName.text.toString(),
+            etLastName.text.toString(),
+            etDescription.text.toString(),
+            profileImageUri
+        )
+
+        val profileActivityIntent = Intent(this, ProfileActivity::class.java)
+        profileActivityIntent.putExtra(ProfileActivity.PROFILE_EXTRA, profile)
+        startActivity(profileActivityIntent)
+    }
+
 
     private fun onGalleryClick() {
         // Create an Intent with action as ACTION_PICK
